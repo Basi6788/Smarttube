@@ -162,8 +162,7 @@ public class TunnelHubDialog implements MotherActivity.OnResult, TunnelEngineMan
         TunnelConfig current = mEngine.getSelectedConfig();
         for (int i = 0; i < configs.size(); i++) {
             TunnelConfig c = configs.get(i);
-            titles[i] = c.name + "
-" + c.getSummaryLine();
+            titles[i] = c.name + "\n" + c.getSummaryLine();
             if (current != null && c.id.equals(current.id)) {
                 checkedIdx = i;
             }
@@ -228,11 +227,10 @@ public class TunnelHubDialog implements MotherActivity.OnResult, TunnelEngineMan
             try {
                 new MaterialFilePicker()
                         .withActivity((Activity) mContext)
-                        .withRequestCode(REQ_MATERIAL_PICK_TXT)
                         .withFilter(Pattern.compile(".*\\.(txt|dark|nm|json|conf)$", Pattern.CASE_INSENSITIVE))
                         .withHiddenFiles(true)
                         .withTitle("Select Tunnel .txt Config File")
-                        .start();
+                        .start(REQ_MATERIAL_PICK_TXT);
             } catch (Exception e) {
                 MessageHelpers.showMessage(mContext, "File browser error: " + e.getMessage());
             }
@@ -310,8 +308,7 @@ public class TunnelHubDialog implements MotherActivity.OnResult, TunnelEngineMan
         if (mLogsView == null) return;
         StringBuilder sb = new StringBuilder();
         for (String line : logs) {
-            sb.append(line).append("
-");
+            sb.append(line).append("\n");
         }
         mLogsView.setText(sb.toString());
         if (mLogsScroll != null) {
