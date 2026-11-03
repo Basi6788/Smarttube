@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Expressive & Aurora Palette -->
+    <color name="aurora_bg_deep">#060913</color>
+    <color name="aurora_bg_surface">#0D1528</color>
+    <color name="aurora_sidebar_surface">#10192E</color>
+    <color name="aurora_card_surface">#15223B</color>
+    <color name="aurora_card_focused">#1E325C</color>
+    <color name="aurora_cyan">#00F2FE</color>
+    <color name="aurora_violet">#7F00FF</color>
+    <color name="aurora_emerald">#00FF87</color>
+    <color name="aurora_magenta">#FF2A85</color>
+    <color name="aurora_text_primary">#F8FAFC</color>
+    <color name="aurora_text_secondary">#94A3B8</color>
+    <color name="aurora_glow_stroke">#FF00F2FE</color>
+
+    <!-- MOD: Focused player button color -->
+    <color name="lb_control_button_color">#CC00F2FE</color>
+
+    <!-- Common colors -->
+    <color name="default_background_gradient_start">#060913</color>
+    <color name="default_background_gradient_end">#150E2A</color>
+    <color name="fastlane_background">#00F2FE</color>
+    <color name="fastlane_background_dark">#0F172A</color>
+    <color name="default_light_grey">#1E293B</color>
+    <color name="search_opaque">#00F2FE</color>
+    <color name="search_opaque_yellow">#FFAA3F</color>
+
+    <!-- Card view colors -->
+    <color name="card_selected_background_white">#1E325C</color>
+    <color name="card_selected_background_white_grey">#243B6B</color>
+    <color name="card_selected_background_yellow">#FFAA3F</color>
+    <color name="card_selected_background_grey">#1E293B</color>
+    <color name="card_selected_text_black">#F8FAFC</color>
+    <color name="card_selected_text_grey">#00F2FE</color>
+    <color name="card_default_background">#15223B</color>
+    <color name="card_default_background_dark">#131F36</color>
+    <color name="card_default_text">#F8FAFC</color>
+
+    <!-- Browse fragment colors -->
+    <color name="shelf_background">#0D1528</color>
+    <color name="shelf_background_dark">#060913</color>
+    <color name="icon_background">#1E293B</color>
+    <color name="icon_alt_background">#1E1B4B</color>
+    <color name="player_background">#FF04070F</color>
+
+    <!-- Dark color scheme (Aurora Dark Expressive) -->
+    <color name="scheme_grey_background">#0D1528</color>
+    <color name="scheme_grey_background_dark">#0B1222</color>
+    <color name="scheme_grey_shelf_background_dark">#060913</color>
+    <color name="scheme_grey_card_background_dark">#15223B</color>
+
+    <!-- Red color scheme (Aurora Crimson) -->
+    <color name="scheme_red_background">#160B18</color>
+    <color name="scheme_red_background_dark">#2A0F2D</color>
+    <color name="scheme_red_shelf_background_dark">#0B060E</color>
+    <color name="scheme_red_card_background_dark">#26142B</color>
+
+    <!-- Blue color scheme (Aurora Cyan) -->
+    <color name="scheme_blue_background">#00F2FE</color>
+    <color name="scheme_blue_background_dark">#0A2540</color>
+
+    <!-- Vineyard -->
+    <color name="black_87pc">#77000000</color>
+    <color name="primary_dark">#0F172A</color>
+    <color name="primary_light">#00F2FE</color>
+    <color name="primary">#7F00FF</color>
+    <color name="white_87pc">#DDF8FAFC</color>
+
+    <!-- Tooltip mod -->
+    <color name="tooltip_background_dark_mod">#F215223B</color>
+    <color name="tooltip_background_light_mod">#F2FFFFFF</color>
+    <color name="foreground_material_dark_mod">@android:color/white</color>
+    <color name="foreground_material_light_mod">@android:color/black</color>
+
+    <!-- Orb buttons colors: search, accounts, search settings -->
+    <color name="orb_color">#1E293B</color>
+    <color name="orb_bright_color">#00F2FE</color>
+    <color name="orb_icon_color">#00F2FE</color>
+
+    <!-- Search page mic button color -->
+    <color name="lb_speech_orb_not_recording">@color/orb_color</color>
+    <color name="lb_speech_orb_not_recording_pulsed">@color/orb_bright_color</color>
+    <color name="lb_speech_orb_not_recording_icon">@color/orb_icon_color</color>
+</resources>

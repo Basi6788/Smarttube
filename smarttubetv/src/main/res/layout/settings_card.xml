@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/settings_card_root"
+              android:focusableInTouchMode="false"
+              android:focusable="true"
+              android:clickable="true"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:padding="8dp"
+              android:background="@drawable/aurora_card_bg"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/settings_image"
+        android:layout_width="@dimen/settings_image_size"
+        android:layout_height="@dimen/settings_image_size"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription"/>
+    <com.liskovsoft.smartyoutubetv2.tv.ui.widgets.marqueetextviewcompat.MarqueeTextViewCompat
+        android:id="@+id/settings_title"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/settings_card_width"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textStyle="bold"
+        android:textColor="@color/aurora_text_primary"
+        android:textAlignment="center"/>
+</LinearLayout>

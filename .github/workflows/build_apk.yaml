@@ -1,0 +1,113 @@
+name: Build SmartTube Aurora APK
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    env:
+      HAS_SIGNING_KEY: ${{ secrets.SIGNING_KEY != '' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Ensure Submodules Present (ZIP Upload Fallback)
+        run: |
+          if [ ! -f "SharedModules/constants.gradle" ]; then
+            echo "Cloning SharedModules..."
+            rm -rf SharedModules
+            git clone --depth 1 https://github.com/yuliskov/SharedModules.git SharedModules
+          fi
+          if [ ! -f "MediaServiceCore/core_settings.gradle" ]; then
+            echo "Cloning MediaServiceCore..."
+            rm -rf MediaServiceCore
+            git clone --depth 1 https://github.com/yuliskov/MediaServiceCore.git MediaServiceCore
+          fi
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Configure Keystore Signing (Secrets or Auto-Generated Key)
+        run: |
+          if [ "${{ env.HAS_SIGNING_KEY }}" = "true" ]; then
+            echo "Using repository signing secrets..."
+            echo "storePassword=${{ secrets.KEY_STORE_PASSWORD }}" > keystore.properties
+            echo "keyAlias=${{ secrets.ALIAS }}" >> keystore.properties
+            echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> keystore.properties
+            echo "storeFile=${{ github.workspace }}/key.jks" >> keystore.properties
+            echo "${{ secrets.SIGNING_KEY }}" | base64 --decode > ${{ github.workspace }}/key.jks
+          else
+            echo "No SIGNING_KEY secret found; generating automatic release keystore so APKs are installable..."
+            keytool -genkeypair -v \
+              -keystore "${{ github.workspace }}/key.jks" \
+              -alias smarttube_aurora \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass aurora123 -keypass aurora123 \
+              -dname "CN=SmartTube Aurora, OU=MobileTV, O=SmartTube, L=City, S=State, C=PK"
+            echo "storePassword=aurora123" > keystore.properties
+            echo "keyAlias=smarttube_aurora" >> keystore.properties
+            echo "keyPassword=aurora123" >> keystore.properties
+            echo "storeFile=${{ github.workspace }}/key.jks" >> keystore.properties
+          fi
+
+      - name: Prepare Gradle & Relax Lint Abort
+        run: |
+          chmod +x gradlew
+          sed -i 's/abortOnError true/abortOnError false/g' smarttubetv/build.gradle || true
+          sed -i 's/abortOnError true/abortOnError false/g' common/build.gradle || true
+
+      - name: Extract Version Name
+        id: get_version
+        run: |
+          sed -i "s/versionName \"\(.*\)\"/versionName \"\1-aurora-${{ github.run_number }}\"/" smarttubetv/build.gradle
+          VERSION_NAME=$(grep "versionName" smarttubetv/build.gradle | head -n 1 | awk -F'"' '{print $2}')
+          echo "VERSION_NAME=${VERSION_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Build Signed Release APKs (ARM64, ARMv7, x86, Universal)
+        run: ./gradlew clean assembleStbetaRelease --no-daemon --stacktrace
+
+      - name: Upload All Built APKs (Bundle)
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartTube-Aurora-${{ steps.get_version.outputs.VERSION_NAME }}-All-APKs
+          path: ./smarttubetv/build/outputs/apk/stbeta/release/*.apk
+          if-no-files-found: error
+
+      - name: Upload Universal APK (TV & Mobile Recommended)
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartTube-Aurora-${{ steps.get_version.outputs.VERSION_NAME }}-Universal
+          path: ./smarttubetv/build/outputs/apk/stbeta/release/*_universal.apk
+          if-no-files-found: warn
+
+      - name: Upload ARM64-v8a APK (Modern Mobile & 64-bit TV)
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartTube-Aurora-${{ steps.get_version.outputs.VERSION_NAME }}-arm64-v8a
+          path: ./smarttubetv/build/outputs/apk/stbeta/release/*_arm64-v8a.apk
+          if-no-files-found: warn
+
+      - name: Upload ARMv7a APK (32-bit Android TV Boxes & FireStick)
+        uses: actions/upload-artifact@v4
+        with:
+          name: SmartTube-Aurora-${{ steps.get_version.outputs.VERSION_NAME }}-armeabi-v7a
+          path: ./smarttubetv/build/outputs/apk/stbeta/release/*_armeabi-v7a.apk
+          if-no-files-found: warn

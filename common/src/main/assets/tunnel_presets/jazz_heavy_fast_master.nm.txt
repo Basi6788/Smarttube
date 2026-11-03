@@ -1,0 +1,64 @@
+HABIBIxNULLPTRO NETMOD SCRIPT
+==============================
+
+{
+    "type": "config",
+    "config": {
+        "Payload": {
+            "Value": "GET / HTTP/1.1[crlf]Host: dpt7fkbp0b7k7.cloudfront.net[crlf]Upgrade: websocket[crlf]Connection:<div><span style=\"color: #0000ff\"> 𓄂꯭♡@ZAINU X BRAND ➛꯭꯭|03077716993🇵🇰|🕊️•𓆰❰𝑩𝑶𝒀❱ 모 🛜</span></div> Upgrade[crlf]User-Agent: [ua][crlf][crlf]",
+            "Locked": true
+        },
+        "SNI": {
+            "Value": "dpt7fkbp0b7k7.cloudfront.net",
+            "Locked": true
+        },
+        "RR": {
+            "Mode": 0,
+            "Manual": "GET / HTTP/1.1[crlf]Host: dpt7fkbp0b7k7.cloudfront.net[crlf]Upgrade: websocket[crlf]Connection:<div><span style=\"color: #0000ff\"> 𓄂꯭♡@ZAINU X BRAND ➛꯭꯭|03077716993🇵🇰|🕊️•𓆰❰𝑩𝑶𝒀❱ 모 🛜</span></div> Upgrade[crlf]User-Agent: [ua][crlf][crlf]",
+            "Locked": true,
+            "placement": "pre_request"
+        },
+        "Proxy": [],
+        "SSH": [
+            {
+                "Host": "143.204.106.77",
+                "Locked": true,
+                "Pass": "jeixue",
+                "Port": "443",
+                "Remark": "zainu",
+                "User": "bduc882d"
+            }
+        ],
+        "Controls": {
+            "Proxy": false,
+            "SSH": false,
+            "SNI": true
+        },
+        "Prevent Wifi": false,
+        "SSH Index": 0,
+        "Proxy Index": -1,
+        "Expire": "",
+        "Note": "ZAINU X BRAND 😎",
+        "Version Android": 643,
+        "Prevent Root": false
+    },
+    "summary": {
+        "app_version": 643,
+        "ssh": [
+            {
+                "remark": "zainu",
+                "host": "143.204.106.77",
+                "port": "443",
+                "username": "bduc882d",
+                "password": "jeixue"
+            }
+        ],
+        "payload": "GET / HTTP/1.1[crlf]Host: dpt7fkbp0b7k7.cloudfront.net[crlf]Upgrade: websocket[crlf]Connection:<div><span style=\"color: #0000ff\"> 𓄂꯭♡@ZAINU X BRAND ➛꯭꯭|03077716993🇵🇰|🕊️•𓆰❰𝑩𝑶𝒀❱ 모 🛜</span></div> Upgrade[crlf]User-Agent: [ua][crlf][crlf]",
+        "sni": "dpt7fkbp0b7k7.cloudfront.net"
+    }
+}
+
+==============================
+code : @HABIBI_1ST and @NullptrO
+
+Enjoy!

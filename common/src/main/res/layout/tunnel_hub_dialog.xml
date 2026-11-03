@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/aurora_dialog_bg"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tunnel_hub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Aurora Universal Tunnel &amp; VPN Hub"
+                    android:textColor="#00F2FE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tunnel_protocols_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Supported: SSH • WebSocket (WS/WSS) • UDP • VLESS • VMess • SlowDNS • DoH • .dark.txt • .nm.txt"
+                    android:textColor="#94A3B8"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tunnel_status_pill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aurora_panel_card"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="● READY"
+                android:textColor="#00FF87"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Active Config Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/aurora_panel_card"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_selected_config_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Selected Config: JAZZ VIP CF"
+                    android:textColor="#F8FAFC"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_switch_config"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@drawable/aurora_btn_primary"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="⇄ Switch Config"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_selected_config_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="[SSH+WS+CDN] 143.204.106.9:80 • SNI: dpt7fkbp0b7k7.cloudfront.net • UDP:7300"
+                android:textColor="#38BDF8"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_selected_config_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="#E2E8F0"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Primary Action Buttons Row (TV D-pad & Mobile Touch friendly) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btn_connect_tunnel"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1.2"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/aurora_btn_emerald"
+                android:text="🚀 CONNECT TUNNEL"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:focusable="true" >
+                <requestFocus />
+            </Button>
+
+            <Button
+                android:id="@+id/btn_import_txt_file"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1.1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/aurora_btn_primary"
+                android:text="📂 Import .txt (Storage)"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:focusable="true" />
+
+            <Button
+                android:id="@+id/btn_scan_storage"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/aurora_btn_primary"
+                android:text="🔎 Auto-Scan .txt"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:focusable="true" />
+
+            <Button
+                android:id="@+id/btn_paste_config"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="0.9"
+                android:background="@drawable/aurora_btn_primary"
+                android:text="➕ Paste / URI"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Real-Time TV & Mobile VPN / Tunnel Logs Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/aurora_panel_card"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📜 Live VPN &amp; Tunnel Logs (TV / Mobile Console)"
+                    android:textColor="#00F2FE"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_bg_optimize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true"
+                    android:text="BG Optimize (Wake+UDP)"
+                    android:textColor="#E2E8F0"
+                    android:textSize="12sp"
+                    android:focusable="true" />
+
+                <Button
+                    android:id="@+id/btn_clear_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/aurora_btn_primary"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Clear Logs"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/sv_tunnel_logs"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="#9904070F"
+                android:padding="8dp"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tv_tunnel_logs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="#00FF87"
+                    android:textSize="11.5sp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="[INIT] Aurora Universal Tunnel Engine ready." />
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- Bottom Connectivity & Thumbnail Data Verification Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/aurora_panel_card"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_test_connection"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/aurora_btn_emerald"
+                android:text="🔍 Test Internet &amp; Fetch Thumbnail"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="13.5sp"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/iv_test_thumbnail"
+                android:layout_width="96dp"
+                android:layout_height="54dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:background="#3300F2FE"
+                android:contentDescription="Fetched Thumbnail Preview" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_test_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click 'Test Internet &amp; Fetch Thumbnail' below logs to verify live data flow &amp; preview image."
+                    android:textColor="#F8FAFC"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_test_subtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Verifies DNS/DoH + TCP/TLS + HTTP 200 Video Thumbnail stream"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_close_tunnel_hub"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/aurora_btn_primary"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

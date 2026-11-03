@@ -1,0 +1,56 @@
+HABIBI DARK TUNNEL SCRIPT
+==============================
+
+{
+    "type": "SSH",
+    "name": " JAZZ VIP CF 🇸🇬",
+    "sshTunnelConfig": {
+        "injectConfig": {
+            "enabled": true
+        }
+    },
+    "encryptedLockedConfig": {
+        "LockedAppConfig": {
+            "VersionCode": 32,
+            "VersionName": "1.0.26",
+            "Message": "<h6 style=\"text-align:center;\"><span>📶 Jazz: FREE <font color='#1BB700'>(Premium)<h6 style=\"text-align:center;\"><span>🔁 Join Channel: <a href=\"https://t.me/armods7\">Click here<h6 style=\"text-align:center;\"><span>🔁 Join Channel: <a href=\"https://t.me/hsmodzofc2\">Click here<h6 style=\"text-align:center;\"><a href=\"https://t.me/jrazaque\" style=\"text-decoration:none;\"><font color='#FF0000'>ABDULRAZAQUE",
+            "ConnectedMessage": "<h6 style=\\\"text-align:center;\\\"><a href=\\\"https://t.me/hsmodzofc2\\\" style=\\\"text-decoration:none;\\\"><font color='#FF0000'>@hsmodzofc2</font></a><br><a href=\\\"https://t.me/armods7\" style=\\\"text-decoration:none;\\\"><font color='#FF0000'>@AbdulRazaque",
+            "ExpiredAtTimestamp": 0,
+            "HardwareIdList": [],
+            "TunnelType": "SSH",
+            "IsSshLocked": true
+        },
+        "EncryptedLockedConfig": {
+            "InjectConfig": {
+                "IsEncrypted": true,
+                "EncryptedMode": "DIRECT",
+                "EncryptedProxyHost": "localhost",
+                "EncryptedProxyPort": "8080",
+                "EncryptedServerNameIndication": [],
+                "EncryptedPayload": "GET / HTTP/1.1[crlf]Host: dpt7fkbp0b7k7.cloudfront.net[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]",
+                "EncryptedDnsttDnsHost": "1.1.1.1",
+                "EncryptedDnsttDnsPort": "53",
+                "EncryptedDnsttServerName": [],
+                "EncryptedDnsttPubkey": []
+            },
+            "SshConfig": {
+                "IsEncrypted": true,
+                "IsLocked": true,
+                "EncryptedHost": "143.204.106.9",
+                "EncryptedPort": "80",
+                "EncryptedUsername": "bduc882d",
+                "EncryptedPassword": "jeixue"
+            },
+            "V2RayConfig": {
+                "IsEncrypted": true,
+                "IsInjectModeEnabled": false,
+                "EncryptedConfig": []
+            }
+        }
+    }
+}
+
+==============================
+code : @HABIBI_1ST
+
+Enjoy!

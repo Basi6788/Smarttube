@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/browse_dummy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- BrowseFrameLayout serves as root of transition and manages switch between left and right -->
+    <androidx.leanback.widget.BrowseFrameLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="afterDescendants"
+        android:id="@+id/browse_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.leanback.widget.BrowseRowsFrameLayout
+            android:id="@+id/browse_container_dock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.leanback.widget.ScaleFrameLayout
+                android:id="@+id/scale_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.leanback.widget.BrowseRowsFrameLayout>
+
+        <!-- Padding needed for shadow -->
+        <FrameLayout
+            android:id="@+id/browse_headers_dock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingEnd="50dp" />
+    </androidx.leanback.widget.BrowseFrameLayout>
+
+    <!-- Mobile & TV Expressive Floating Quick Bar (Sidebar Toggle + Tunnel VPN Status Pill) -->
+    <LinearLayout
+        android:id="@+id/aurora_quick_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:elevation="16dp">
+
+        <TextView
+            android:id="@+id/aurora_mobile_sidebar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginEnd="10dp"
+            android:text="☰ Menu"
+            android:textColor="#F8FAFC"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:clickable="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/aurora_tunnel_quick_pill"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="⚡ Tunnel Hub"
+            android:textColor="#00FF87"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:clickable="true" />
+    </LinearLayout>
+</FrameLayout>

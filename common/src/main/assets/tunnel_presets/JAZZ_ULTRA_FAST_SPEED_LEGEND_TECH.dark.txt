@@ -1,0 +1,56 @@
+HABIBI DARK TUNNEL SCRIPT
+==============================
+
+{
+    "type": "SSH",
+    "name": " 🇵🇰JAZZ ULTRA FAST SPEED by LEGEND TECH🔥",
+    "sshTunnelConfig": {
+        "injectConfig": {
+            "enabled": true
+        }
+    },
+    "encryptedLockedConfig": {
+        "LockedAppConfig": {
+            "VersionCode": 32,
+            "VersionName": "1.0.26",
+            "Message": "<font color=\"#00FFFF\"><b>╔═════ 👑 VIP PREMIUM FILE 👑 ═════╗</b></font><br>\n<font color=\"#00FF00\"><b>➤ ⚡ Status:</b> Ultra High-Speed Server🔥</font><br>\n<font color=\"#FF00FF\"><b>➤ 👩‍💻 Admin:</b> Silent Queen </font><br>\n<font color=\"#FFFF00\"><b>➤ 🔗 Channel:</b> t.me/LegendTech93</font><br>\n<font color=\"#00FFFF\"><b>╚════════ Enjoy Private Internet ════════╝</b></font>",
+            "ConnectedMessage": "<font color=\"#00FFFF\"><b>╔═════ 🔒 CONNECTED 🔒 ═════╗</b></font><br>\n<font color=\"#00FF00\"><b>✅ Status:</b> Connected Successfully</font><br>\n<font color=\"#FF00FF\"><b>📂 File:</b> Private File</font><br>\n<font color=\"#FFFF00\"><b>⚡ Powered By:</b> Legend Tech</font><br>\n<font color=\"#00FFFF\"><b>╚══════ 🚀 Enjoy Premium Connection 🚀 ══════╝</b></font>",
+            "ExpiredAtTimestamp": 1793732400000,
+            "HardwareIdList": [],
+            "TunnelType": "SSH",
+            "IsSshLocked": true
+        },
+        "EncryptedLockedConfig": {
+            "InjectConfig": {
+                "IsEncrypted": true,
+                "EncryptedMode": "DIRECT",
+                "EncryptedProxyHost": "localhost",
+                "EncryptedProxyPort": "8080",
+                "EncryptedServerNameIndication": [],
+                "EncryptedPayload": "GET / HTTP/1.1[crlf]Host: d318hdausjayqs.cloudfront.net[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]",
+                "EncryptedDnsttDnsHost": "1.1.1.1",
+                "EncryptedDnsttDnsPort": "53",
+                "EncryptedDnsttServerName": [],
+                "EncryptedDnsttPubkey": []
+            },
+            "SshConfig": {
+                "IsEncrypted": true,
+                "IsLocked": true,
+                "EncryptedHost": "143.204.106.9",
+                "EncryptedPort": "80",
+                "EncryptedUsername": "vpn123",
+                "EncryptedPassword": "vpn123"
+            },
+            "V2RayConfig": {
+                "IsEncrypted": true,
+                "IsInjectModeEnabled": false,
+                "EncryptedConfig": []
+            }
+        }
+    }
+}
+
+==============================
+code : @HABIBI_1ST
+
+Enjoy!

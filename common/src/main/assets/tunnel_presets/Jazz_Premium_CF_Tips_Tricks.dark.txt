@@ -1,0 +1,56 @@
+HABIBI DARK TUNNEL SCRIPT
+==============================
+
+{
+    "type": "SSH",
+    "name": "Jazz Premium CF By Tips Tricks Shop ",
+    "sshTunnelConfig": {
+        "injectConfig": {
+            "enabled": true
+        }
+    },
+    "encryptedLockedConfig": {
+        "LockedAppConfig": {
+            "VersionCode": 32,
+            "VersionName": "1.0.26",
+            "Message": "<center>\n<font color=\"#00ff66\" size=\"5\"><b>⚡ TIPS & TRICKS SHOP 🇵🇰 ⚡</b></font><br>\n\n<font color=\"#ff0000\"><b>EXPIRED DATE : 2 Days</b></font><br>\n\n⚡ <font color=\"#cccccc\"><b>TELEGRAM CHANNEL :</b></font>\n<a href=\"https://t.me/tips_tricks_Shop2\"><font color=\"#00ff66\"><b>CLICK HERE</b></font></a><br>\n\n⚡ <font color=\"#cccccc\"><b>TELEGRAM GROUP :</b></font>\n<a href=\"https://t.me/tips_tricks_Shop2\"><font color=\"#00ff66\"><b>CLICK HERE</b></font></a><br>\n\n⚡ <font color=\"#cccccc\"><b>WHATSAPP :</b></font>\n<a href=\"https://wa.me/923337443001\"><font color=\"#00ff66\"><b>CLICK HERE</b></font></a><br>\n\n<font color=\"#ff00ff\"><b>CREATED BY : 🔥SyEd NaQvi🔥</b></font><br>\n<font color=\"#ff00ff\"><b>Owner : MaMoOn KhAn ❤️</b></font><br>\n\n<font color=\"#ffff00\"><b>⚠ DON'T SEND IN ANY DECRYPTER GROUPS ⚠</b></font><br>\n<font color=\"#00ffff\"><b>JOIN NOW FOR DAILY PREMIUM FILES</b></font>\n</center>",
+            "ConnectedMessage": "<font color=\"#ff0000\"><b>Connected Successfully</b></font><br>",
+            "ExpiredAtTimestamp": 1793732400000,
+            "HardwareIdList": [],
+            "TunnelType": "SSH",
+            "IsSshLocked": true
+        },
+        "EncryptedLockedConfig": {
+            "InjectConfig": {
+                "IsEncrypted": true,
+                "EncryptedMode": "DIRECT",
+                "EncryptedProxyHost": "localhost",
+                "EncryptedProxyPort": "8080",
+                "EncryptedServerNameIndication": [],
+                "EncryptedPayload": "GET / HTTP/1.1[crlf]Host: d318hdausjayqs.cloudfront.net[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]",
+                "EncryptedDnsttDnsHost": "1.1.1.1",
+                "EncryptedDnsttDnsPort": "53",
+                "EncryptedDnsttServerName": [],
+                "EncryptedDnsttPubkey": []
+            },
+            "SshConfig": {
+                "IsEncrypted": true,
+                "IsLocked": true,
+                "EncryptedHost": "143.204.106.9",
+                "EncryptedPort": "80",
+                "EncryptedUsername": "vpn123",
+                "EncryptedPassword": "vpn123"
+            },
+            "V2RayConfig": {
+                "IsEncrypted": true,
+                "IsInjectModeEnabled": false,
+                "EncryptedConfig": []
+            }
+        }
+    }
+}
+
+==============================
+code : @HABIBI_1ST
+
+Enjoy!
